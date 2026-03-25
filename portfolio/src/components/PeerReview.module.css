@@ -1,0 +1,112 @@
+.section {
+  background: var(--ink);
+  border-top: 1px solid var(--border-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.heading {
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headingBody {
+  font-size: 0.9rem;
+  color: var(--muted-light);
+  line-height: 1.75;
+}
+
+.journalsLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.journalsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.journalTag {
+  font-size: 0.78rem;
+  color: var(--parchment-dim);
+  padding: 6px 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+.journalTag:hover {
+  border-color: var(--border);
+  color: var(--parchment);
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: all 0.25s ease;
+  border-radius: var(--radius);
+}
+.card:hover {
+  padding-left: 8px;
+  background: var(--gold-glow);
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.08em;
+  padding-top: 3px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reviewTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.45;
+}
+
+.reviewJournal {
+  font-size: 0.8rem;
+  color: var(--muted-light);
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .heading { position: static; }
+}

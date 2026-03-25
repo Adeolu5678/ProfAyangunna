@@ -1,0 +1,154 @@
+.about {
+  border-top: 1px solid var(--border-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.headingCol {
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.credential {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.credLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.credVal {
+  font-size: 0.85rem;
+  color: var(--parchment-dim);
+}
+
+.credLink {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+.credLink:hover { color: var(--parchment); }
+
+.lead {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--parchment);
+  line-height: 1.65;
+  font-weight: 400;
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+}
+
+.body {
+  font-size: 0.95rem;
+  color: var(--parchment-dim);
+  line-height: 1.85;
+}
+
+/* Awards */
+.awardsTitle {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.awardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.award {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.awardYear {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold);
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 36px;
+}
+
+.awardName {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--parchment);
+  font-weight: 500;
+}
+
+.awardBody {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted-light);
+  margin-top: 2px;
+}
+
+/* Memberships */
+.memberships {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.membership {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--parchment-dim);
+}
+
+.membershipDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .headingCol {
+    position: static;
+  }
+}

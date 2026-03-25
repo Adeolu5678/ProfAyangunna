@@ -1,0 +1,128 @@
+.section {
+  background: var(--ink);
+  border-top: 1px solid var(--border-soft);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.left {
+  position: sticky;
+  top: calc(var(--nav-h) + 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.body {
+  font-size: 0.9rem;
+  color: var(--muted-light);
+  line-height: 1.75;
+}
+
+/* Right */
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  padding: 28px 24px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-out-expo);
+  background: transparent;
+}
+.item:hover {
+  background: var(--card);
+  border-color: var(--border);
+  transform: translateX(6px);
+}
+
+.highlighted {
+  background: var(--card);
+  border-color: var(--gold-dim);
+}
+.highlighted::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gold);
+}
+
+.highlightBadge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.periodRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.phdTag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+.degree {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.institution {
+  font-size: 0.9rem;
+  color: var(--parchment-dim);
+  font-weight: 500;
+}
+
+.affiliation {
+  font-size: 0.82rem;
+  color: var(--muted-light);
+  font-style: italic;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .inner { grid-template-columns: 1fr; gap: 48px; }
+  .left { position: static; }
+}

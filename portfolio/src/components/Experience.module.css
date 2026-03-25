@@ -1,0 +1,123 @@
+.section {
+  background: var(--surface);
+  border-top: 1px solid var(--border-soft);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 64px;
+  max-width: 500px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 28px;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--muted);
+  border: 2px solid var(--surface);
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.dotCurrent {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px var(--gold-glow), 0 0 12px var(--gold-dim);
+}
+
+.line {
+  width: 1px;
+  flex: 1;
+  background: var(--border-soft);
+  min-height: 48px;
+  margin-top: 4px;
+}
+
+.content {
+  padding-bottom: 48px;
+}
+
+.contentTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.role {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--parchment);
+  line-height: 1.3;
+}
+
+.current .role {
+  color: var(--gold);
+}
+
+.org {
+  font-size: 0.9rem;
+  color: var(--parchment-dim);
+  margin-top: 4px;
+}
+
+.div {
+  font-size: 0.8rem;
+  color: var(--muted-light);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.periodCurrent { color: var(--gold); }
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .contentTop { flex-direction: column; gap: 8px; }
+}

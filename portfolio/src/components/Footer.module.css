@@ -1,0 +1,223 @@
+.footer {
+  border-top: 1px solid var(--border-soft);
+}
+
+/* CTA Strip */
+.cta {
+  background: linear-gradient(135deg, var(--card) 0%, rgba(201,168,76,0.06) 100%);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 64px 0;
+}
+
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--parchment);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.ctaBody {
+  font-size: 0.92rem;
+  color: var(--muted-light);
+  max-width: 440px;
+  line-height: 1.7;
+}
+
+.ctaBtn {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 16px 36px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s var(--ease-out-expo);
+  flex-shrink: 0;
+}
+.ctaBtn:hover {
+  background: var(--parchment);
+  transform: translateY(-2px);
+  color: var(--ink);
+}
+
+/* Main footer */
+.main {
+  background: var(--ink);
+  padding: 72px 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr 1fr;
+  gap: 60px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+/* Identity */
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--parchment);
+  letter-spacing: -0.02em;
+}
+
+.designation {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.org {
+  font-size: 0.83rem;
+  color: var(--muted-light);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.contactLink {
+  font-size: 0.83rem;
+  color: var(--parchment-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.contactLink:hover { color: var(--gold); }
+
+.orcidRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.orcidLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.orcidLink {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+.orcidLink:hover { color: var(--parchment); }
+
+/* Nav col */
+.navCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.footerLink {
+  font-size: 0.85rem;
+  color: var(--muted-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footerLink:hover { color: var(--parchment); }
+
+/* Ref col */
+.refCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.referee {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.refName {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--parchment);
+  font-weight: 400;
+}
+
+.refTitle {
+  font-size: 0.76rem;
+  color: var(--muted-light);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.refOrg {
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.refEmail {
+  font-size: 0.76rem;
+  color: var(--gold);
+  text-decoration: none;
+  margin-top: 2px;
+}
+.refEmail:hover { color: var(--parchment); }
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 28px;
+}
+
+.bottomText {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+  .ctaInner { flex-direction: column; align-items: flex-start; }
+  .bottom { flex-direction: column; align-items: flex-start; }
+}
