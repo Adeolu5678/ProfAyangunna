@@ -8,8 +8,6 @@ const journals = [...new Set(peerReview.map((r) => r.journal))];
 export default function PeerReview() {
   const ref = useReveal();
 
-  if (peerReview.length === 0) return null;
-
   return (
     <section id="peer-review" className={`${styles.section} section`} ref={ref}>
       <div className="container">
@@ -21,8 +19,8 @@ export default function PeerReview() {
               Peer Review<br />Activity
             </h2>
             <span className="accent-line reveal reveal-delay-2" />
-            <p className={`${styles.body} reveal reveal-delay-2`}>
-              A distinguished academic trajectory spanning decades of dedicated scholarship and research in the social sciences.
+            <p className={`${styles.headingBody} reveal reveal-delay-2`}>
+              Contributing to academic quality assurance through external examinations, professorial assessments, and policy-focused advisory reviews in social work and social development.
             </p>
             <div className={`${styles.journalsList} reveal reveal-delay-3`}>
               <p className={styles.journalsLabel}>Journals Served</p>

@@ -40,6 +40,7 @@ export default function Hero() {
 
           <h1 className={styles.name} data-hero style={{ opacity: 0, transform: "translateY(30px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}>
             <span className={styles.nameFirst}>James</span>
+            <span className={styles.nameFirst}>Ayanrinde</span>
             <span className={styles.nameLast}>Ayangunna</span>
           </h1>
 
@@ -81,50 +82,41 @@ export default function Hero() {
           >
             <span className={styles.quoteMarks}>&ldquo;</span>
             <p>
-              Advancing knowledge through rigorous research and dedicated scholarship in the social sciences.
+              Advancing social welfare scholarship through social policy, health social work, and evidence-based interventions for vulnerable populations.
             </p>
           </div>
 
-          {totalPubs > 0 && (
-            <div
-              className={styles.stats}
-              data-hero
-              style={{ opacity: 0, transform: "translateY(24px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}
-            >
-              <div className={styles.stat}>
-                <span className={styles.statNum}>{totalPubs}+</span>
-                <span className={styles.statLabel}>Publications</span>
-              </div>
-              <div className={styles.statDivider} />
-              <div className={styles.stat}>
-                <span className={styles.statNum}>{peerReview?.length ?? 0}</span>
-                <span className={styles.statLabel}>Peer Reviews</span>
-              </div>
-              <div className={styles.statDivider} />
-              <div className={styles.stat}>
-                <span className={styles.statNum}>—</span>
-                <span className={styles.statLabel}>Yrs Service</span>
-              </div>
+          <div
+            className={styles.stats}
+            data-hero
+            style={{ opacity: 0, transform: "translateY(24px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+          >
+            <div className={styles.stat}>
+              <span className={styles.statNum}>{totalPubs}+</span>
+              <span className={styles.statLabel}>Publications</span>
             </div>
-          )}
+            <div className={styles.statDivider} />
+            <div className={styles.stat}>
+              <span className={styles.statNum}>{peerReview?.length ?? 12}</span>
+              <span className={styles.statLabel}>Peer Reviews</span>
+            </div>
+            <div className={styles.statDivider} />
+            <div className={styles.stat}>
+              <span className={styles.statNum}>30+</span>
+              <span className={styles.statLabel}>Yrs Service</span>
+            </div>
+          </div>
 
-          {personal.orcid !== "To be provided" && (
-            <div
-              className={styles.orcid}
-              data-hero
-              style={{ opacity: 0, transform: "translateY(16px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}
-            >
-              <span className={styles.orcidLabel}>ORCID iD</span>
-              <a
-                href={`https://orcid.org/${personal.orcid}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.orcidVal}
-              >
-                {personal.orcid}
-              </a>
-            </div>
-          )}
+          <div
+            className={styles.orcid}
+            data-hero
+            style={{ opacity: 0, transform: "translateY(16px)", transition: "all 0.9s cubic-bezier(0.16,1,0.3,1)" }}
+          >
+            <span className={styles.orcidLabel}>Email</span>
+            <a href={`mailto:${personal.email}`} className={styles.orcidVal}>
+              {personal.email}
+            </a>
+          </div>
         </div>
       </div>
 

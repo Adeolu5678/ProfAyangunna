@@ -4,16 +4,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Prof. James Ayangunna — Academic Portfolio",
   description:
-    "Academic portfolio of Professor James Ayangunna, Department of Social Sciences, University of Ibadan.",
+    "Academic portfolio of Professor James Ayanrinde Ayangunna, Department of Social Work, University of Ibadan.",
   keywords: [
     "James Ayangunna",
-    "Social Sciences",
+    "Social Welfare",
+    "Social Work",
+    "Health Promotion",
     "University of Ibadan",
     "Academic Portfolio",
   ],
   openGraph: {
     title: "Prof. James Ayangunna",
-    description: "Professor of Social Sciences — University of Ibadan",
+    description: "Professor of Social Work and Social Welfare — University of Ibadan",
     type: "website",
   },
 };

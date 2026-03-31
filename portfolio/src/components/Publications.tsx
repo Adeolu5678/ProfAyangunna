@@ -25,13 +25,13 @@ export default function Publications() {
           <p className="section-label reveal">Scholarly Output</p>
           <h2 className={`section-title reveal reveal-delay-1`}>Publications</h2>
           <p className={`${styles.subtitle} reveal reveal-delay-2`}>
-            A corpus of peer-reviewed journals, authored books, conference articles, and doctoral research spanning the social sciences.
+            A focused body of work in social welfare, health social work, gender, quality of life, and social policy interventions across Nigerian and international contexts.
           </p>
         </div>
 
         {/* Tab Nav */}
         <div className={`${styles.tabNav} reveal reveal-delay-2`} role="tablist">
-          {tabs.filter(t => t.count > 0 || t.key === "journals").map((t) => (
+          {tabs.map((t) => (
             <button
               key={t.key}
               role="tab"

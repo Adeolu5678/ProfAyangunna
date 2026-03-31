@@ -43,8 +43,8 @@ export default function Nav() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.inner}>
         <a href="#hero" className={styles.logo}>
-          <span className={styles.logoName}>J. Ayangunna</span>
-          <span className={styles.logoTitle}>Professor · Social Sciences</span>
+          <span className={styles.logoName}>J. A. Ayangunna</span>
+          <span className={styles.logoTitle}>Professor · Social Work</span>
         </a>
 
         <ul className={`${styles.links} ${menuOpen ? styles.open : ""}`}>

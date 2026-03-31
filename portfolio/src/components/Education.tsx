@@ -18,7 +18,7 @@ export default function Education() {
             </h2>
             <span className="accent-line reveal reveal-delay-2" />
             <p className={`${styles.body} reveal reveal-delay-2`}>
-              A distinguished academic trajectory spanning decades of dedicated scholarship and research in the social sciences.
+              A rigorous progression through social work, public health, and social welfare training at the University of Ibadan, culminating in doctoral specialization in Social Welfare.
             </p>
           </div>
 

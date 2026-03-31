@@ -12,7 +12,7 @@ export default function Footer() {
             <div>
               <h2 className={styles.ctaTitle}>Open to Collaboration</h2>
               <p className={styles.ctaBody}>
-                Research partnerships, speaking engagements, and academic collaborations welcome.
+                Research partnerships, external examination roles, policy consulting, and interdisciplinary social development collaborations are welcome.
               </p>
             </div>
             <a href={`mailto:${personal.email}`} className={styles.ctaBtn}>
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className={styles.grid}>
             {/* Identity */}
             <div className={styles.identity}>
-              <h3 className={styles.name}>Prof. James Ayangunna</h3>
+              <h3 className={styles.name}>Prof. James Ayanrinde Ayangunna</h3>
               <p className={styles.designation}>{personal.designation}</p>
               <p className={styles.org}>{personal.role}<br />{personal.organisation}</p>
               <div className={styles.contact}>
@@ -37,14 +37,12 @@ export default function Footer() {
                   <a key={i} href={`tel:${p.replace(/\s/g, "")}`} className={styles.contactLink}>{p}</a>
                 ))}
               </div>
-              {personal.orcid !== "To be provided" && (
-                <div className={styles.orcidRow}>
-                  <span className={styles.orcidLabel}>ORCID</span>
-                  <a href={`https://orcid.org/${personal.orcid}`} target="_blank" rel="noopener noreferrer" className={styles.orcidLink}>
-                    {personal.orcid}
-                  </a>
-                </div>
-              )}
+              <div className={styles.orcidRow}>
+                <span className={styles.orcidLabel}>Official Email</span>
+                <a href="mailto:ja.ayangunna@mail.ui.edu.ng" className={styles.orcidLink}>
+                  ja.ayangunna@mail.ui.edu.ng
+                </a>
+              </div>
             </div>
 
             {/* Navigation */}
@@ -58,25 +56,23 @@ export default function Footer() {
             </div>
 
             {/* Referees */}
-            {referees.length > 0 && (
-              <div className={styles.refCol}>
-                <p className={styles.colLabel}>Academic Referees</p>
-                {referees.map((r, i) => (
-                  <div key={i} className={styles.referee}>
-                    <p className={styles.refName}>{r.name}</p>
-                    <p className={styles.refTitle}>{r.title}</p>
-                    <p className={styles.refOrg}>{r.organisation}</p>
-                    <a href={`mailto:${r.email}`} className={styles.refEmail}>{r.email}</a>
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className={styles.refCol}>
+              <p className={styles.colLabel}>Academic Referees</p>
+              {referees.map((r, i) => (
+                <div key={i} className={styles.referee}>
+                  <p className={styles.refName}>{r.name}</p>
+                  <p className={styles.refTitle}>{r.title}</p>
+                  <p className={styles.refOrg}>{r.organisation}</p>
+                  <a href={`mailto:${r.email}`} className={styles.refEmail}>{r.email}</a>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Bottom bar */}
           <div className={styles.bottom}>
             <p className={styles.bottomText}>
-              © {new Date().getFullYear()} Professor James Ayangunna. All rights reserved.
+              © {new Date().getFullYear()} Prof. James Ayanrinde Ayangunna. All rights reserved.
             </p>
             <p className={styles.bottomText}>
               {personal.address}

@@ -14,22 +14,18 @@ export default function About() {
           <div className={styles.headingCol}>
             <p className={`section-label reveal`}>Who I Am</p>
             <h2 className={`section-title reveal reveal-delay-1`}>
-              Professor &<br />Researcher
+              Professor &<br />Scholar
             </h2>
             <span className={`accent-line reveal reveal-delay-2`} />
             <div className={`${styles.credentials} reveal reveal-delay-2`}>
               <div className={styles.credential}>
-                <span className={styles.credLabel}>Specialisation</span>
-                <span className={styles.credVal}>Social Sciences</span>
+                <span className={styles.credLabel}>Specialization</span>
+                <span className={styles.credVal}>Social Welfare and Health Social Work</span>
               </div>
-              {personal.orcid !== "To be provided" && (
-                <div className={styles.credential}>
-                  <span className={styles.credLabel}>ORCID iD</span>
-                  <a href={`https://orcid.org/${personal.orcid}`} target="_blank" rel="noopener noreferrer" className={styles.credLink}>
-                    {personal.orcid}
-                  </a>
-                </div>
-              )}
+              <div className={styles.credential}>
+                <span className={styles.credLabel}>Institution</span>
+                <span className={styles.credVal}>{personal.organisation}</span>
+              </div>
               <div className={styles.credential}>
                 <span className={styles.credLabel}>Languages</span>
                 <span className={styles.credVal}>{personal.languages.join(", ")}</span>
@@ -44,8 +40,8 @@ export default function About() {
             </p>
 
             <p className={`${styles.body} reveal reveal-delay-1`}>
-              Professor James Ayangunna is a distinguished academic at the University of Ibadan, 
-              Department of Social Sciences. Full biography to be provided.
+              Professor James Ayanrinde Ayangunna joined the Department of Social Work, University of Ibadan, in 2005 and rose to the rank of Professor in 2017.
+              He has served as external examiner to multiple Nigerian universities and York University Toronto, and as a consultant to UNICEF and the Federal Ministry of Women Affairs and Social Development.
             </p>
 
             {/* Awards */}
@@ -67,16 +63,14 @@ export default function About() {
             )}
 
             {/* Memberships */}
-            {memberships.length > 0 && (
-              <div className={`${styles.memberships} reveal reveal-delay-3`}>
-                {memberships.map((m, i) => (
-                  <div key={i} className={styles.membership}>
-                    <span className={styles.membershipDot} />
-                    <span>{m}</span>
-                  </div>
-                ))}
-              </div>
-            )}
+            <div className={`${styles.memberships} reveal reveal-delay-3`}>
+              {memberships.map((m, i) => (
+                <div key={i} className={styles.membership}>
+                  <span className={styles.membershipDot} />
+                  <span>{m}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
